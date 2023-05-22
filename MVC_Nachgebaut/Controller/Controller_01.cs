@@ -8,13 +8,15 @@ namespace MVC_Nachgebaut.Controller {
             switch (s) {
                 case "1":
                 Console.Write("Bitte String eingeben: ");
-                string eingabe = Console.ReadLine();
-                Persistenz.Speichern(Persistenz.SpeichernVorbereiten(eingabe));
+                //string eingabe = Console.ReadLine();
+                //Persistenz.Speichern(Persistenz.SpeichernVorbereiten(eingabe));
+                Persistenz.Speichern(Persistenz.SpeichernVorbereiten(Console.ReadLine()));
                 return ergebnis;
                 break;
                 case "2":
-                string[] datei = Persistenz.Laden();
-                br.Ausgabe(datei);
+                //string[] datei = Persistenz.Laden();
+                //br.Ausgabe(datei);
+                br.Ausgabe(Persistenz.Laden());
                 return ergebnis;
                 break;
                 case "3":

@@ -10,7 +10,12 @@
             return s;
         }
         public static string[] Laden() {
-            string[] ergebnis = File.ReadAllLines(@"Sav.dat");
+            string[] ergebnis;
+            if (File.Exists("Sav.dat")) {
+                ergebnis = File.ReadAllLines(@"Sav.dat");
+            } else {
+                ergebnis = new string[] { "404" };
+            }
             return ergebnis;
         }
     }
