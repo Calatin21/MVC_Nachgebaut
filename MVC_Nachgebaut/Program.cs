@@ -7,11 +7,8 @@ namespace MVC_Nachgebaut {
             Browser browser = new Browser();
             Controller_01 controller = new Controller_01();
             bool ergebnis = true;
-            string auswahl = "";
             while (ergebnis) {
-                //ergebnis = controller.MenuEingabe(browser.Menu(), browser);
-                auswahl = browser.Menu();
-                ergebnis = controller.MenuEingabe(auswahl, browser);
+                ergebnis = controller.MenuEingabe(browser.Menu(), browser);
             }
         }
     }
