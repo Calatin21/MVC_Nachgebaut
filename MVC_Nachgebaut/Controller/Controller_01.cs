@@ -3,14 +3,13 @@ using MVC_Nachgebaut.View;
 
 namespace MVC_Nachgebaut.Controller {
     internal class Controller_01 {
-        public bool MenuEingabe(string s, Browser br ) {
+        public bool MenuEingabe(string s, Browser br) {
             bool ergebnis = true;
             switch (s) {
                 case "1":
                 Console.Write("Bitte String eingeben: ");
                 string eingabe = Console.ReadLine();
-                eingabe = "***" + eingabe + "!!!";
-                Persistenz.Speichern(eingabe);
+                Persistenz.Speichern(Persistenz.SpeichernVorbereiten(eingabe));
                 return ergebnis;
                 break;
                 case "2":

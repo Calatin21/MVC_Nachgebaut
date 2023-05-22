@@ -4,7 +4,7 @@ namespace MVC_Nachgebaut.View {
     internal class Browser {
         public string Menu() {
             string ergebnis = "";
-            Console.WriteLine("1) Information hinzufügen\n2) Information abrufen\n 3) Exit");
+            Console.WriteLine("1) Information hinzufügen\n2) Information abrufen\n3) Exit");
             string antwort = Console.ReadLine();
             switch (antwort) {
                 case "1":
